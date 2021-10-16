@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <title>Form Webinar - jquery events</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#p1").mouseup(function () {
+                alert("Masukkan nama lengkap");
+            });
+        });
+        $(document).ready(function () {
+            $("#p2").mouseup(function () {
+                alert("sebuah gaya hidup dimana seseorang merasa bahwa dirinya harus terus bekerja keras dan hanya meluangkan sedikit waktu untuk  beristirahat, dengan begitu ia dapat menganggap dirinya sukses.");
+            });
+        });
+        $(document).ready(function () {
+            $("form").submit(function () {
+                alert("Thanks for filling in! And you will be redirected to the webinar via youtube!");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" style="background-color: burlywood;">
+            <div class="card-header">
+                <div class="header" style="text-align: center;"><b> Isi Form Berikut Untuk Mengikuti Webinar "Self Healing"</b></div>
+                <form action="https://youtu.be/RhOQELmKNsU">
+                    <div class="form-group">
+                        <label id="p1">Nama Lengkap</label><br>
+                        <input type="text" class="form-control" name="Name" value=""><br>
+                        <label for="dob">Tanggal Lahir</label><br>
+                        <input type="date" class="form-control" name="date" value=""><br>
+                        <label for="jurusan">Jurusan</label><br>
+                        <input type="text" class="form-control" name="Jurusan" value=""><br>
+                        <label for="semester">Semester</label><br>
+                        <input type="number" class="form-control" name="smt" value=""><br>
+                        <label id="p2" for="quest">Apakah kamu merasa lelah dengan tuntutan <b> HUSTLE CULTURE</b>?</label><br>
+                        <input type="checkbox" name="Quests1" value="">
+                        <label for="ya">iya</label><br>
+                        <input type="checkbox" name="Quests2" value="">
+                        <label for="tidak">tidak</label><br>
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
